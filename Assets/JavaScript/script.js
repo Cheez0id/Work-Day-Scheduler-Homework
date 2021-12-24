@@ -1,3 +1,3 @@
-var dayToday = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+var dayToday = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(dayToday);
 

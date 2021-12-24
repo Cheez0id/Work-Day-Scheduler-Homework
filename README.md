@@ -2,9 +2,9 @@
 
 Using the pseudocode provided, I will plan steps to achieve a complete iteration of the expected criteria. [remember that you have so many resources for all of this, not just the activities!]  Refer to the pseudocode from Jung down below acceptance criteria.
  1. DONE - Use provided started code and basic frameworks (html, css, js, etc)- DONE
- 2. Add today's date to the top of the page with moment.js - Done
+ 2. DONE -Add today's date to the top of the page with moment.js - Done
  3. Add a Dynamic calendar with columns and rows that uses data from moment.js to color code Past/Present/And future rows in real time.
-    a. First find a pre-made 'table' that will lend itself to our needs, probably Bootstrap? Something as clean and simple-looking a possible. Remember, if it's bootstrap it shoud be based on a 12x12 grid
+    a. First find a pre-made 'table' that will lend itself to our needs, probably Bootstrap? Something as clean and simple-looking a possible. Remember, if it's bootstrap it shoud be based on a 12x12 grid?
     b. Add dynamic elements to pull information from moment.js and add to/pull from local storage.
         - times/dates displayed; 
         - Input fields for free text and dropdowns with pre-determined text?
