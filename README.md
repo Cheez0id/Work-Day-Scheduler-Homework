@@ -9,6 +9,19 @@ Using the pseudocode provided, I will plan steps to achieve a complete iteration
         - times/dates displayed; 
         - Input fields for free text and dropdowns with pre-determined text?
         - buttons for add/subtract
+    
+<!-- THIS IS THE BOOTSTRAP FOR CHANGE COLOR On rows - USE THIS FOR CHANGING ROW STATUS BASED ON TIME-->
+<tr class="table-active">...</tr>
+
+<tr class="table-primary">...</tr>
+<tr class="table-secondary">...</tr>
+<tr class="table-success">...</tr>
+<tr class="table-danger">...</tr>
+<tr class="table-warning">...</tr>
+<tr class="table-info">...</tr>
+<tr class="table-light">...</tr>
+<tr class="table-dark">...</tr>
+
 <!-- check unit 4 activity 5 -->
  4. Local Storage 
     a. I need to review the material for this, but I think that I will be writing a function that takes input from the user in a form on the calendar/table, that will be an array of keys/value and STORED in local storage (??where IS that?  I mean, it seems like it's just bulit into the Browser API?? Do I have to make something for this or does local storage just exist and 'just work'??)
