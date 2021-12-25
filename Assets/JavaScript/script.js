@@ -12,11 +12,11 @@ clearButton[0].addEventListener ("click", function() {
     // TODO: make this function 'clear' the content of the associated row of the second column in the grid
 }
 )
-clearButton.forEach(logit);
 
-function logit () {console.log ("yo!")};
-
-// copied from reference- array.forEach(function(currentValue, index, arr), thisValue)
+document.querySelectorAll('.clear').forEach(clearButton => {
+  clearButton.addEventListener('click', event => {console.log ("hey!")
+  })
+})
 
 
 //THE ABOVE WILL WORK PUTTING [ARRAYSELECTION 0-24 FOR ONE BUTTON] BUT IM TRYING TO MAKE A FOR LOOP SO THAT I SELECTS ALL OF THE BUTTONS WITH THE CLEAR CLASE TO MAKE THEM ALL WORK
