@@ -11,3 +11,25 @@ clearButton.addEventListener ("click", function() {
     console.log ("thistext");
 }
 )
+
+var toDo = document.getElementById('1AM');
+var myText = document.getElementById('theDiv');
+
+//TODO: make taskinput be what the user writes in
+toDo.addEventListener('click', function(){
+  var taskInput = 'Hello World !';
+td.1AM = taskInput;
+});
+
+
+//   // Creates element based on tag entered by user
+//   var toDo = document.createElement(taskInput);
+
+//   function addTask() = 
+
+//   // Adds text content to created tag
+//   tag.textContent = "input from user";
+  
+//   // Appends tag as child of document body
+//   document.body.appendChild(toDo);
+// }
