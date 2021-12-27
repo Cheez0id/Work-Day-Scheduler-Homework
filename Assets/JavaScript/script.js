@@ -56,17 +56,23 @@ $( function() {
 var time = moment().format("hA");
 $("#currentTime").text(time);
 
-//NEED if statement for each of the time slots
+//NEED if statement for each of the time slots? NEED else statement that works for times
 
-if (time = "12PM") {console.log ("IT's LUNCHTIME"), changeStyle()}
+if (time = "12PM") {console.log ("IT's LUNCHTIME"), timeGreen()} 
+else {timeGrey()}
 
 
-//TODO: variables for coloring the rows
-var oneAM = "#1AM";
-var twoAM = "#2AM";
+//TODO: variables for some reason
+// var oneAM = "#1AM";
+// var twoAM = "#2AM";
 
 //Sample function to change colors of rows when time
-function changeStyle(){
-  var element = document.getElementById("1AM");
+function timeGreen(){
+  var element = document.getElementById("12PM");
   element.style.backgroundColor = "#00FF00";
+}
+
+function timeGrey(){
+  var element = document.getElementById("1AM");
+  element.style.backgroundColor = "#D3D3D3"; console.log ("it is not lunchtime")
 }
