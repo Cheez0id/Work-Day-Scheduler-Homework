@@ -4,36 +4,18 @@ $("#currentDay").text(dayToday);
 
 // variables selecting all of the elements .task and all elements .clear
 var tasks = document.getElementById("timeBody").querySelectorAll(".task"); 
-console.log (tasks);
 var clearButton = document.getElementById("timeBody").querySelectorAll(".clear"); 
+var saveButton = document.getElementById("timeBody").querySelectorAll(".save"); 
 
-//Method(function) for making all .task elements DO something
-document.querySelectorAll('.task').forEach(tasks => {
-  tasks.addEventListener('click', event => 
-  //TODO: THE BELOW FUNCTION WILL OPEN EDITABLE TEXT AREA ONCLICK
-  {createInputField(), console.log (event.target), createSaveButton()
-  })
-})
+// //Method(function) for making all .task elements DO something
+// document.querySelectorAll('.task').forEach(tasks => {
+//   tasks.addEventListener('click', event => 
+//   //TODO: THE BELOW FUNCTION WILL OPEN EDITABLE TEXT AREA ONCLICK
+//   {createInputField(), console.log (event.target), createSaveButton()
+//   })
+// })
 
-//function to create inputfield
-function createInputField() {
-  var inputField = document.createElement("INPUT");
-  inputField.setAttribute("type", "text");
-  inputField.setAttribute("value", "TODO Item");
-  console.log ("input field created");
-  //make an inputfield appear on click of target block area
-  event.target.appendChild(inputField);
-}
 
-//function to create savebutton
-//TODO: correct error where multiple fields are made; onclick? save input to local storage
-function createSaveButton() {
-  var saveButton = document.createElement("BUTTON");
-  saveButton.innerHTML = "Save";
-  console.log ("save button exists");
-  //make an inputfield appear on click of target block area
-  event.target.appendChild(saveButton);
-}
 
 //Method(function) for making all Clear buttons DO something
 document.querySelectorAll('.clear').forEach(clearButton => {
@@ -44,6 +26,13 @@ document.querySelectorAll('.clear').forEach(clearButton => {
   )
 })
 
+$(".save").click(function(event){
+console.log ($(this).parent().siblings(".task").children("textarea").val()); 
+console.log ($(this).parent().siblings("th").text()); 
+    localStorage.setItem($(this).parent().siblings("th").text(), $(this).parent().siblings(".task").children("textarea").val())
+}
+  )
+
 
 //TODO: add feature showing past/present/future color coded
 //TODO: connect calendar
@@ -53,26 +42,57 @@ $( function() {
 
 
 //This is for the current time (does not update live)
-var time = moment().format("hA");
+var time = moment().format("HH");
 $("#currentTime").text(time);
+
+
+
 
 //NEED if statement for each of the time slots? NEED else statement that works for times
 
-if (time = "12PM") {console.log ("IT's LUNCHTIME"), timeGreen()} 
-else {timeGrey()}
+// if (time == "2PM") {console.log ("IT's LUNCHTIME"), timeGreen()} 
+// else {timeGrey()}
+
+//If the row id == the current time, then change the class; 
+//TODO ADD NUMBERS AND REMOVE PAST IN HTML
+for (var i = 1; i <= 24; i++) {
+  console.log($("." + i).attr("class"))
+  
+  if (parseInt($("." + i).attr("class")) == time){
+    $("." + i).addClass("present") 
+  }
+  if (parseInt($("." + i).attr("class")) < time){
+    $("." + i).addClass("past") 
+  }
+  if (parseInt($("." + i).attr("class")) > time){
+    $("." + i).addClass("future") 
+  }
+}
 
 
-//TODO: variables for some reason
+function changeColor(){
+if (time == 345) {
+  this.getAttribute()
+  this.setAttribute("class", "future"); console.log ("present");}
+} 
+
+// changeColor();
+//       //  else
+//       //    this.setAttribute("class", "future") console.log ("future")}this.setAttribute("class", "present");
+
+    
+
+
+
+// // TODO: variables for some reason
 // var oneAM = "#1AM";
 // var twoAM = "#2AM";
 
-//Sample function to change colors of rows when time
-function timeGreen(){
-  var element = document.getElementById("12PM");
-  element.style.backgroundColor = "#00FF00";
-}
+// // function timeGreen(){
+// //   var element = document.getElementById("12PM");
+// //   element.style.backgroundColor = "#00FF00";
+// // }
 
-function timeGrey(){
-  var element = document.getElementById("1AM");
-  element.style.backgroundColor = "#D3D3D3"; console.log ("it is not lunchtime")
-}
+// // function timeGrey(){
+// //   var element = document.getElementById("1AM");
+// //   element.style.backgroundColor = "#D3D3D3"; console.log ("it is not lunchtime")
