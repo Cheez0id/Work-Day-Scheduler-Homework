@@ -22,9 +22,10 @@ function createInputField() {
   var inputField = document.createElement("INPUT");
   inputField.setAttribute("type", "text");
   console.log ("myfunction worked");
-  document.body.children[1].children[0].children.timeBody.children[0].children[1].appendChild = inputField
+  //figured out how to make an inputfield appear on click of block 1
+  document.body.children[1].children[0].children.timeBody.children[0].children[1].appendChild(inputField);
+  //td#1AM.task.appendChild(inputField); << trying to find shorter way to write the above
 }
-
 
 //Method(function) for making all Clear buttons DO something
 document.querySelectorAll('.clear').forEach(clearButton => {
