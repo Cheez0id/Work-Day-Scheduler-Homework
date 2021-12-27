@@ -20,7 +20,7 @@ function createInputField() {
   var inputField = document.createElement("INPUT");
   inputField.setAttribute("type", "text");
   inputField.setAttribute("value", "TODO Item");
-  console.log ("myfunction worked");
+  console.log ("input field created");
   //make an inputfield appear on click of target block area
   event.target.appendChild(inputField);
 }
@@ -45,22 +45,21 @@ document.querySelectorAll('.clear').forEach(clearButton => {
 })
 
 
+//TODO: add feature showing past/present/future color coded
+//TODO: connect calendar
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
 
 
-//TODO: make taskinput be what the user writes in
-// toDo.addEventListener('click', function(){
-//   var taskInput = 'Hello World !';
-// });
+//This is for the current time (does not update live)
+var time = moment().format("hh:mm:ss");
+$("#currentTime").text(time);
 
+//NEED if statement for each of the time slots
+// if time === "#1AM"
 
-//   // Creates element based on tag entered by user
-//   var toDo = document.createElement(taskInput);
+var oneAM = "#1AM";
+var twoAM = "#2AM";
 
-//   function addTask() = 
-
-//   // Adds text content to created tag
-//   tag.textContent = "input from user";
-  
-//   // Appends tag as child of document body
-//   document.body.appendChild(toDo);
-// }
+console.log (oneAM)
