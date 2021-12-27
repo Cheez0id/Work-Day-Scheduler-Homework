@@ -11,27 +11,35 @@ var clearButton = document.getElementById("timeBody").querySelectorAll(".clear")
 document.querySelectorAll('.task').forEach(tasks => {
   tasks.addEventListener('click', event => 
   //TODO: THE BELOW FUNCTION WILL OPEN EDITABLE TEXT AREA ONCLICK
-  {createInputField()
+  {createInputField(), console.log (event.target), createSaveButton()
   })
 })
 
-console.log (document.body.children[1].children[0].children.timeBody.children[0].children[1])
-
-//trying to put the inputfield in the block area
+//function to create inputfield
 function createInputField() {
   var inputField = document.createElement("INPUT");
   inputField.setAttribute("type", "text");
+  inputField.setAttribute("value", "TODO Item");
   console.log ("myfunction worked");
-  //figured out how to make an inputfield appear on click of block 1
-  document.body.children[1].children[0].children.timeBody.children[0].children[1].appendChild(inputField);
-  //td#1AM.task.appendChild(inputField); << trying to find shorter way to write the above
+  //make an inputfield appear on click of target block area
+  event.target.appendChild(inputField);
+}
+
+//function to create savebutton
+//TODO: correct error where multiple fields are made; onclick? save input to local storage
+function createSaveButton() {
+  var saveButton = document.createElement("BUTTON");
+  saveButton.innerHTML = "Save";
+  console.log ("save button exists");
+  //make an inputfield appear on click of target block area
+  event.target.appendChild(saveButton);
 }
 
 //Method(function) for making all Clear buttons DO something
 document.querySelectorAll('.clear').forEach(clearButton => {
   clearButton.addEventListener('click', event => 
-  //TODO: THE BELOW FUNCTION WILL CLEAR OUT CONTENT OF COLUMN 2 FOR THE APPROPRIATE ROW ONCLICK --- below is my starting to attempt and make clear button clear tasks block content
-  {console.log ("hey!") 
+  //TODO: THE BELOW FUNCTION WILL CLEAR OUT CONTENT OF block area FOR THE APPROPRIATE ROW ONCLICK --- below is my starting to attempt and make clear button clear tasks block content; I am not sure how to achieve this without writing 24 functions - not sure how to link 
+  {console.log (event.target); 
   } 
   )
 })
