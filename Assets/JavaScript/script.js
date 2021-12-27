@@ -53,13 +53,20 @@ $( function() {
 
 
 //This is for the current time (does not update live)
-var time = moment().format("hh:mm:ss");
+var time = moment().format("hA");
 $("#currentTime").text(time);
 
 //NEED if statement for each of the time slots
-// if time === "#1AM"
 
+if (time = "12PM") {console.log ("IT's LUNCHTIME"), changeStyle()}
+
+
+//TODO: variables for coloring the rows
 var oneAM = "#1AM";
 var twoAM = "#2AM";
 
-console.log (oneAM)
+//Sample function to change colors of rows when time
+function changeStyle(){
+  var element = document.getElementById("1AM");
+  element.style.backgroundColor = "#00FF00";
+}
