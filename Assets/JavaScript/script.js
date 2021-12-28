@@ -9,15 +9,20 @@ var saveButton = document.getElementById("timeBody").querySelectorAll(".save");
 
 
 //Method(function) for making all Clear buttons DO something
-document.querySelectorAll('.clear').forEach(clearButton => {
-  clearButton.addEventListener('click', event => 
-  //TODO: THE BELOW FUNCTION WILL CLEAR OUT CONTENT OF block area FOR THE APPROPRIATE ROW ONCLICK --- below is my starting to attempt and make clear button clear tasks block content; I am not sure how to achieve this without writing 24 functions - not sure how to link 
-  {console.log (event.target); 
+// document.querySelectorAll('.clear').forEach(clearButton => {
+//   clearButton.addEventListener('click', event => 
+//   //TODO: THE BELOW FUNCTION WILL CLEAR OUT CONTENT OF block area FOR THE APPROPRIATE ROW ONCLICK --- below is my starting to attempt and make clear button clear tasks block content; I am not sure how to achieve this without writing 24 functions - not sure how to link 
+//   {console.log (event.target); 
+//   } 
+//   )
+// })
+
+$(".clear").click(function(event){
+  console.log ($(this).parent().siblings(".task").children("textarea").val()); 
+  console.log ($(this).parent().siblings("th").text()); 
+      localStorage.removeItem($(this).parent().siblings("th").text(), $(this).parent().siblings(".task").children("textarea").val()); window.location.reload()
   } 
-  )
-})
-
-
+     )
 
 
 //This is to save the input from the user in local storage
@@ -25,6 +30,7 @@ $(".save").click(function(event){
 console.log ($(this).parent().siblings(".task").children("textarea").val()); 
 console.log ($(this).parent().siblings("th").text()); 
     localStorage.setItem($(this).parent().siblings("th").text(), $(this).parent().siblings(".task").children("textarea").val());
+    window.location.reload()
 }
   )
 
@@ -46,9 +52,14 @@ console.log ($(this).parent().siblings("th").text());
   //attempting to make onload function work to log indivdual values from local storage
 window.onload = (event) => {
   (localStorage.getItem(localStorage.key(i)))
-  for(var i =0; i < localStorage.length; i++){if (i == "1AM") {console.log ("the function!")}
+  for(var i =0; i < localStorage.length; i++){
+   $("#" + localStorage.key(i)).val(localStorage.getItem(localStorage.key(i)))
+    if (localStorage.key(i) == "1am") {
+  }console.log (localStorage.getItem(localStorage.key(i)))
   }
 }
+
+
   // //trying to assign an id to the key/value
   // var userInput = {
   //   one: (#1AM).children().children(".task").children(".textarea")
