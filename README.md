@@ -9,17 +9,6 @@ Using the pseudocode provided, I will plan steps to achieve a complete iteration
         - Input fields for free text and dropdowns with pre-determined text?
         - buttons for add/subtract
     
-<!-- THIS IS THE BOOTSTRAP FOR CHANGE COLOR On rows - USE THIS FOR CHANGING ROW STATUS BASED ON TIME-->
-<tr class="table-active">...</tr>
-
-<tr class="table-primary">...</tr>
-<tr class="table-secondary">...</tr>
-<tr class="table-success">...</tr>
-<tr class="table-danger">...</tr>
-<tr class="table-warning">...</tr>
-<tr class="table-info">...</tr>
-<tr class="table-light">...</tr>
-<tr class="table-dark">...</tr>
 
 <!-- check unit 4 activity 5 -->
  4. Local Storage 
@@ -34,7 +23,6 @@ Using the pseudocode provided, I will plan steps to achieve a complete iteration
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar 
-
 WHEN I scroll down
 THEN I am presented with timeblocks for standard business hours
 WHEN I view the timeblocks for that day
