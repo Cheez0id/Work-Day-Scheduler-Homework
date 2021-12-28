@@ -95,3 +95,5 @@ Homework 5 Pseudocode (from Instructor Jung)
     .removeClass('present');
     .addClass('future');
     }
+
+    contributions: Jacob Carver; Mary Lee Prince
