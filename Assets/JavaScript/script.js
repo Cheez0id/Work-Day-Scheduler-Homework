@@ -17,13 +17,52 @@ document.querySelectorAll('.clear').forEach(clearButton => {
   )
 })
 
+
+
+
 //This is to save the input from the user in local storage
 $(".save").click(function(event){
 console.log ($(this).parent().siblings(".task").children("textarea").val()); 
 console.log ($(this).parent().siblings("th").text()); 
-    localStorage.setItem($(this).parent().siblings("th").text(), $(this).parent().siblings(".task").children("textarea").val())
+    localStorage.setItem($(this).parent().siblings("th").text(), $(this).parent().siblings(".task").children("textarea").val());
 }
   )
+
+  //
+  //method for when the page refreshes to log local storage stuff in the console
+  window.onload = (event) => {
+    for(var i =0; i < localStorage.length; i++){
+      console.log(localStorage.getItem(localStorage.key(i)));
+    }
+  };
+
+  //The following function iterates over the local storage keys:
+  // function forEachKey(callback) {
+  //   for (var i = 0; i < localStorage.length; i++) {
+  //     callback(localStorage.key(i));
+  //   }
+  // }
+
+  //attempting to make onload function work to log indivdual values from local storage
+window.onload = (event) => {
+  (localStorage.getItem(localStorage.key(i)))
+  for(var i =0; i < localStorage.length; i++){if (i == "1AM") {console.log ("the function!")}
+  }
+}
+  // //trying to assign an id to the key/value
+  // var userInput = {
+  //   one: (#1AM).children().children(".task").children(".textarea")
+  // }
+  // console.log (userInput)
+
+  // when page loads, need ot loop through all of the keys (1am, etc) to get the value
+// if key = 1am and there is a value in local Storage, put the value into the sibling
+
+  // //TODO: work on 
+  // var previousInput = (localStorage.getItem(KEY, value)) 
+  // // for (var i = 0; i <= 24; i++)
+  //  {
+  //   console.log(key + value)}
 
 
 //TODO: connect calendar
