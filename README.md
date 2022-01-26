@@ -1,5 +1,8 @@
 # Work-Day-Scheduler-Homework
 
+![screenshot](https://raw.githubusercontent.com/Cheez0id/Work-Day-Scheduler-Homework/main/Assets/wds.JPG)
+https://cheez0id.github.io/Work-Day-Scheduler-Homework/
+
 Using the pseudocode provided, I will plan steps to achieve a complete iteration of the expected criteria. [remember that you have so many resources for all of this, not just the activities!]  Refer to the pseudocode from Jung down below acceptance criteria.
  1. DONE - Use provided started code and basic frameworks (html, css, js, etc)- DONE
  2. DONE -Add today's date to the top of the page with moment.js - Done
